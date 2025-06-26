@@ -87,56 +87,60 @@ const Projects = () => {
           initial="hidden"
           animate="visible"
         >
-          <AnimatePresence mode="wait">
-            {filteredProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                className="project-card"
-                variants={projectVariants}
-                whileHover={{ y: -10 }}
-                onClick={() => setSelectedProject(project)}
-              >
-                <div className="project-image">
-                  <img src={project.image || 'https://via.placeholder.com/400x300'} alt={project.title} />
-                  <div className="project-overlay">
-                    <div className="project-links">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <FaGithub />
-                        </a>
-                      )}
-                      {project.demo && (
-                        <a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <FaExternalLinkAlt />
-                        </a>
-                      )}
-                    </div>
+          {filteredProjects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              className="project-card"
+              variants={projectVariants}
+              whileHover={{ y: -10 }}
+              onClick={() => setSelectedProject(project)}
+            >
+              <div className="project-image">
+                <img 
+                  src={project.image || `https://picsum.photos/400/300?random=${index}`} 
+                  alt={project.title}
+                  onError={(e) => {
+                    e.target.src = `https://picsum.photos/400/300?random=${index}`;
+                  }}
+                />
+                <div className="project-overlay">
+                  <div className="project-links">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <FaGithub />
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <FaExternalLinkAlt />
+                      </a>
+                    )}
                   </div>
                 </div>
-                <div className="project-info">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="project-tech">
-                    {project.technologies.map((tech, i) => (
-                      <span key={i} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+              </div>
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="project-tech">
+                  {project.technologies.map((tech, i) => (
+                    <span key={i} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
 
@@ -187,8 +191,11 @@ const Projects = () => {
               </div>
               <div className="modal-body">
                 <img
-                  src={selectedProject.image || 'https://via.placeholder.com/800x400'}
+                  src={selectedProject.image || `https://picsum.photos/800/400?random=${filteredProjects.findIndex(p => p.title === selectedProject.title)}`}
                   alt={selectedProject.title}
+                  onError={(e) => {
+                    e.target.src = `https://picsum.photos/800/400?random=${filteredProjects.findIndex(p => p.title === selectedProject.title)}`;
+                  }}
                 />
                 <p>{selectedProject.description}</p>
                 <div className="modal-tech">

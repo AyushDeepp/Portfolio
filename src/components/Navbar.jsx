@@ -112,10 +112,10 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-        <motion.ul
+            <motion.ul
           className="nav-links desktop-nav"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {navLinks.map((link) => (
@@ -195,29 +195,29 @@ const Navbar = () => {
                   <p>Choose a section to explore</p>
                 </div>
                 <ul className="mobile-nav-links">
-                  {navLinks.map((link, index) => (
-                    <motion.li
-                      key={link.name}
+              {navLinks.map((link, index) => (
+                <motion.li
+                  key={link.name}
                       initial={{ x: 50, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                       whileHover={{ x: 10 }}
                       whileTap={{ scale: 0.95 }}
-                    >
-                      <a
-                        href={link.path}
+                >
+                  <a
+                    href={link.path}
                         className={activeSection === link.name.toLowerCase() ? 'active' : ''}
-                        onClick={(e) => {
-                          e.preventDefault();
+                    onClick={(e) => {
+                      e.preventDefault();
                           handleNavClick(link.path, link.name.toLowerCase());
-                        }}
-                      >
+                    }}
+                  >
                         <span className="mobile-nav-icon">{link.icon}</span>
                         <span className="mobile-nav-text">{link.name}</span>
                         <span className="mobile-nav-indicator"></span>
-                      </a>
-                    </motion.li>
-                  ))}
+                  </a>
+                </motion.li>
+              ))}
                 </ul>
               </motion.div>
             </>

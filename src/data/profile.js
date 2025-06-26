@@ -60,35 +60,40 @@ export const profileData = {
       description: "Herb-AI Authenticate is a platform where users can be able to identify plants from their photos.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com/AyushDeepp/Herb-AI-Authenticate",
-      demo: "https://herb-ai-authenticate-1.onrender.com/"
+      demo: "https://herb-ai-authenticate-1.onrender.com/",
+      image: "/images/projects/Herb AI Authenticate Plant Identification Website.png"
     },
     {
       title: "Hobby-Matcher",
       description: "Hobby-Matcher is a video-chat platform where users connect based on shared hobbies using vector similarity.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "WebRTC"],
       //github: "https://github.com/AyushDeepp/Herb-AI-Authenticate",
-      demo: "https://hobby-matcher-frontend-wapg.onrender.com/"
+      demo: "https://hobby-matcher-frontend-wapg.onrender.com/",
+      image: "/images/projects/image.png"
     },
     {
       title: "Movie Recommendation System",
       description: "A Collaborative Filtering type of Recommendation System. It suggests movies to users according to the preferences of other users. It uses KNN Algorithm and cosine similarities for recommendation.Integrated a Streamlit-based user interface for interactive recommendations.",
       technologies: ["Python", "Streamlit"],
       github: "https://github.com/AyushDeepp/MovieRecommendationSystem",
-      demo: "https://moviesrecommendationssystem.streamlit.app/"
+      demo: "https://moviesrecommendationssystem.streamlit.app/",
+      image: "/images/projects/MovieRecommendationSystem.png"
     },
     {
       title: "Crypto-Tracker",
       description: "A Python Script that allows users to track the price of Top 5 cryptocurrencies in real-time and also generate the report of the analysis after every 5 minutes.",
       technologies: ["Python"],
       github: "https://github.com/AyushDeepp/Crypto-Tracker",
-      //demo: "https://moviesrecommendationssystem.streamlit.app/"
+      //demo: "https://moviesrecommendationssystem.streamlit.app/",
+      image: "https://www.investopedia.com/thmb/jfOCxEqNsd2QxvgOFbd_Dsp0PvI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cryptocurrency-f6026a2012a14aaa9ef8a1c277fde0f7.jpg"
     },
     {
       title: "Notice App",
       description: "A Notice App that allows users to post and view notices. It is a full stack application built using React, Node.js, MongoDB, and Express.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com/AyushDeepp/NoticeApp",
-      demo: "https://noticeapp-9358.onrender.com"
+      demo: "https://noticeapp-9358.onrender.com",
+      image: "/images/projects/notices.png"
     }
   ],
 
