@@ -1,0 +1,341 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem 0;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo-text {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-dot {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.logo a:hover {
+  transform: translateY(-2px);
+}
+
+.logo a:hover .logo-dot {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  background: transparent;
+}
+
+.desktop-nav li a:hover,
+.desktop-nav li a.active {
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-icon {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.nav-text {
+  font-weight: 500;
+}
+
+/* Mobile Toggle */
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.1);
+  transform: scale(1.1);
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 350px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.mobile-menu-header p {
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+.mobile-nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  background: transparent;
+}
+
+.mobile-nav-links li a:hover,
+.mobile-nav-links li a.active {
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.1);
+  transform: translateX(10px);
+}
+
+.mobile-nav-icon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.mobile-nav-text {
+  flex: 1;
+}
+
+.mobile-nav-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-links li a:hover .mobile-nav-indicator,
+.mobile-nav-links li a.active .mobile-nav-indicator {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav-content {
+    padding: 0 1rem;
+  }
+
+  .mobile-menu {
+    max-width: 300px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-content {
+    padding: 0 1rem;
+  }
+
+  .mobile-menu {
+    max-width: 280px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 0;
+  }
+
+  .navbar.scrolled {
+    padding: 0.6rem 0;
+  }
+
+  .nav-content {
+    padding: 0 1rem;
+  }
+
+  .logo a {
+    font-size: 1.3rem;
+  }
+
+  .mobile-menu {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .mobile-menu-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .mobile-nav-links li a {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-content {
+    padding: 0 0.5rem;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+
+  .nav-toggle {
+    font-size: 1.3rem;
+    padding: 0.4rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .mobile-menu {
+    padding: 1rem;
+  }
+
+  .mobile-menu-header {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-nav-links {
+    gap: 0.3rem;
+  }
+
+  .mobile-nav-links li a {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+} 

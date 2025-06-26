@@ -1,0 +1,99 @@
+.footer {
+  background-color: var(--section-bg);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-social .social-link {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.footer-social .social-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Individual platform colors - simplified */
+.footer-social .social-link:nth-child(1):hover {
+  color: #333333; /* GitHub */
+}
+
+.footer-social .social-link:nth-child(2):hover {
+  color: #0077b5; /* LinkedIn */
+}
+
+.footer-social .social-link:nth-child(3):hover {
+  color: #e4405f; /* Instagram */
+}
+
+.footer-social .social-link:nth-child(4):hover {
+  color: #6c5ce7; /* Codolio */
+}
+
+.footer-social .social-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.footer-social .social-link:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-social .social-link:active {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.footer-copyright {
+  color: var(--light-text);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .footer-social {
+    gap: 1rem;
+  }
+
+  .footer-social .social-link {
+    font-size: 1.3rem;
+  }
+} 
