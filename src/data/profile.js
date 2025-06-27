@@ -64,12 +64,12 @@ export const profileData = {
       image: "/images/projects/Herb AI Authenticate Plant Identification Website.png"
     },
     {
-      title: "Hobby-Matcher",
-      description: "Hobby-Matcher is a video-chat platform where users connect based on shared hobbies using vector similarity.",
+      title: "Soulmegle",
+      description: "Soulmegle is an AI powered Video Chatting platform where random users can connect to each other on the basis of similar interests.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "WebRTC"],
       //github: "https://github.com/AyushDeepp/Herb-AI-Authenticate",
-      demo: "https://hobby-matcher-frontend-wapg.onrender.com/",
-      image: "/images/projects/image.png"
+      demo: "https://soulmegle.com/",
+      image: "/images/projects/Soulmegle.png"
     },
     {
       title: "Movie Recommendation System",
