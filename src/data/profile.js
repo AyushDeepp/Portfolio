@@ -1,30 +1,33 @@
 export const profileData = {
   name: "Ayush Deep",
   title: "Full Stack Developer",
-  about: "Passionate developer with a keen eye for creating elegant solutions in the least amount of time. Specialized in building responsive web applications using modern technologies.",
+  about:
+    "Passionate developer with a keen eye for creating elegant solutions in the least amount of time. Specialized in building responsive web applications using modern technologies.",
   email: "ayushdeep8860@gmail.com",
   phone: "+91 9310042428",
   location: "Ghaziabad, India",
-  
+
   education: [
     {
       degree: "Bachelor of Technology in Computer Science and Engineering",
       school: "Raj Kumar Goel Institute of Technology, Ghaziabad",
       year: "2022-2026 (Persuing)",
-      description: "Current SGPA: 8.71"
+      description: "Current SGPA: 8.71",
     },
     {
       degree: "Senior Secondary (12th)",
-      school: "Durgawati Hemraj Tah Saraswati Vidya Mandir, Nehru Nagar, Ghaziabad",
+      school:
+        "Durgawati Hemraj Tah Saraswati Vidya Mandir, Nehru Nagar, Ghaziabad",
       year: "2021-2022",
-      description: "Percentage: 88.5%"
+      description: "Percentage: 88.5%",
     },
     {
       degree: "High School (10th)",
-      school: "Durgawati Hemraj Tah Saraswati Vidya Mandir, Nehru Nagar, Ghaziabad",
+      school:
+        "Durgawati Hemraj Tah Saraswati Vidya Mandir, Nehru Nagar, Ghaziabad",
       year: "2019-2020",
-      description: "Percentage: 90.83%"
-    }
+      description: "Percentage: 90.83%",
+    },
   ],
 
   skills: {
@@ -51,50 +54,57 @@ export const profileData = {
       "Teamwork",
       "Leadership",
       "Critical Thinking",
-    ]
+    ],
   },
 
   projects: [
     {
       title: "Herb-AI Authenticate",
-      description: "Herb-AI Authenticate is a platform where users can be able to identify plants from their photos.",
+      description:
+        "Herb-AI Authenticate is a platform where users can be able to identify plants from their photos.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com/AyushDeepp/Herb-AI-Authenticate",
       demo: "https://herb-ai-authenticate-1.onrender.com/",
-      image: "/images/projects/Herb AI Authenticate Plant Identification Website.png"
+      image:
+        "/images/projects/Herb AI Authenticate Plant Identification Website.png",
     },
     {
       title: "Soulmegle",
-      description: "Soulmegle is an AI powered Video Chatting platform where random users can connect to each other on the basis of similar interests.",
+      description:
+        "Soulmegle is an AI powered Video Chatting platform where random users can connect to each other on the basis of similar interests.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "WebRTC"],
       //github: "https://github.com/AyushDeepp/Herb-AI-Authenticate",
       demo: "https://soulmegle.com/",
-      image: "/images/projects/Soulmegle.png"
+      image: "/images/projects/Soulmegle.png",
     },
     {
       title: "Movie Recommendation System",
-      description: "A Collaborative Filtering type of Recommendation System. It suggests movies to users according to the preferences of other users. It uses KNN Algorithm and cosine similarities for recommendation.Integrated a Streamlit-based user interface for interactive recommendations.",
+      description:
+        "A Collaborative Filtering type of Recommendation System. It suggests movies to users according to the preferences of other users. It uses KNN Algorithm and cosine similarities for recommendation.Integrated a Streamlit-based user interface for interactive recommendations.",
       technologies: ["Python", "Streamlit"],
       github: "https://github.com/AyushDeepp/MovieRecommendationSystem",
       demo: "https://moviesrecommendationssystem.streamlit.app/",
-      image: "/images/projects/MovieRecommendationSystem.png"
+      image: "/images/projects/MovieRecommendationSystem.png",
     },
     {
       title: "Crypto-Tracker",
-      description: "A Python Script that allows users to track the price of Top 5 cryptocurrencies in real-time and also generate the report of the analysis after every 5 minutes.",
+      description:
+        "A Python Script that allows users to track the price of Top 5 cryptocurrencies in real-time and also generate the report of the analysis after every 5 minutes.",
       technologies: ["Python"],
       github: "https://github.com/AyushDeepp/Crypto-Tracker",
       //demo: "https://moviesrecommendationssystem.streamlit.app/",
-      image: "https://www.investopedia.com/thmb/jfOCxEqNsd2QxvgOFbd_Dsp0PvI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cryptocurrency-f6026a2012a14aaa9ef8a1c277fde0f7.jpg"
+      image:
+        "https://www.investopedia.com/thmb/jfOCxEqNsd2QxvgOFbd_Dsp0PvI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cryptocurrency-f6026a2012a14aaa9ef8a1c277fde0f7.jpg",
     },
     {
       title: "Notice App",
-      description: "A Notice App that allows users to post and view notices. It is a full stack application built using React, Node.js, MongoDB, and Express.",
+      description:
+        "A Notice App that allows users to post and view notices. It is a full stack application built using React, Node.js, MongoDB, and Express.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com/AyushDeepp/NoticeApp",
       demo: "https://noticeapp-9358.onrender.com",
-      image: "/images/projects/notices.png"
-    }
+      image: "/images/projects/notices.png",
+    },
   ],
 
   social: {
@@ -102,23 +112,28 @@ export const profileData = {
     linkedin: "https://www.linkedin.com/in/ayush-deep-6a6140265/",
     leetcode: "https://leetcode.com/u/SnhLbHMp1H/",
     instagram: "https://www.instagram.com/ayushdeep_ayush/",
-    codolio: "https://codolio.com/profile/AyushDeep"
+    codolio: "https://codolio.com/profile/AyushDeep",
   },
+
+  resume:
+    "https://drive.google.com/file/d/1ZMo29_Zkgmm0Sxi7XxQHmC77nWF8XcNH/view?usp=sharing",
 
   achievements: [
     {
       title: "Top 40 in the Navonmesh: AI Idea Challenge 2025",
       organization: "Dr. A.P.J. Abdul Kalam Technical University, Lucknow",
       date: "9th-10th June 2025",
-      description: "Received recognition and participation certificate for developing an innovative AI-powered solution.",
-      image: "https://example.com/award1.jpg"
+      description:
+        "Received recognition and participation certificate for developing an innovative AI-powered solution.",
+      image: "https://example.com/award1.jpg",
     },
     {
       title: "Runner Up in Front-End Frenzy",
       organization: "Logix Society, RKGIT",
       date: "22nd May 2024",
-      description: "Received Trophy and Medal for securing 2nd position in the event by developing a website regarding EV's and their benefits."
-    }
+      description:
+        "Received Trophy and Medal for securing 2nd position in the event by developing a website regarding EV's and their benefits.",
+    },
   ],
 
   certifications: [
@@ -145,7 +160,7 @@ export const profileData = {
       description: "Coursera Certificate",
       link: "https://www.coursera.org/account/accomplishments/verify/QXQXGMCB8KTP",
       //image: "https://drive.google.com/file/d/1c-qJsPBNqhCC5-tjS2gOpr6sOg4G0HOS/view?usp=sharing"
-    }
+    },
   ],
 
   internships: [
@@ -153,7 +168,8 @@ export const profileData = {
       title: "Full Stack Developer - MERN Stack",
       company: "SmartBridge, SmartInternz & MongoDB",
       duration: "20th January 2025 to 26th March 2025",
-      description: "Successfully learned the concepts and demonstrated a high level of efficiency in applying the skills learned in the MERN Stack.",
+      description:
+        "Successfully learned the concepts and demonstrated a high level of efficiency in applying the skills learned in the MERN Stack.",
       link: "https://skillwallet.smartinternz.com/certificate/virtual-internship/1d388729fedebe69bea4a1c795f49026",
       //image: "https://skillwallet.smartinternz.com/certificate/virtual-internship/1d388729fedebe69bea4a1c795f49026"
     },
@@ -161,9 +177,10 @@ export const profileData = {
       title: "Netcamp Summer Internship",
       company: "Netcamp",
       duration: "14th Dec 2023 to 3rd Jan 2024",
-      description: "Went through various concepts and practices in the Web Development, Android App Development and Network Management Technologies.",
+      description:
+        "Went through various concepts and practices in the Web Development, Android App Development and Network Management Technologies.",
       link: "https://drive.google.com/drive/folders/1N41VPxszzLpqAJakzT4hxW67p8AsWQEC?usp=drive_link",
       //image: "https://example.com/internship2.jpg"
-    }
-  ]
-}; 
+    },
+  ],
+};

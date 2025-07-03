@@ -1,14 +1,28 @@
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram, FaCode } from 'react-icons/fa';
-import { profileData } from '../data/profile';
-import '../styles/Home.css';
+import { motion } from "framer-motion";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaCode,
+  FaFileAlt,
+} from "react-icons/fa";
+import { profileData } from "../data/profile";
+import "../styles/Home.css";
 
 const Home = () => {
   const socialLinks = [
-    { icon: <FaGithub />, url: profileData.social.github, label: 'GitHub' },
-    { icon: <FaLinkedin />, url: profileData.social.linkedin, label: 'LinkedIn' },
-    { icon: <FaInstagram />, url: profileData.social.instagram, label: 'Instagram' },
-    { icon: <FaCode />, url: profileData.social.codolio, label: 'Codolio' }
+    { icon: <FaGithub />, url: profileData.social.github, label: "GitHub" },
+    {
+      icon: <FaLinkedin />,
+      url: profileData.social.linkedin,
+      label: "LinkedIn",
+    },
+    {
+      icon: <FaInstagram />,
+      url: profileData.social.instagram,
+      label: "Instagram",
+    },
+    { icon: <FaCode />, url: profileData.social.codolio, label: "Codolio" },
   ];
 
   return (
@@ -43,14 +57,27 @@ const Home = () => {
             ))}
           </div>
 
-          <motion.a
-            href="#contact"
-            className="cta-button"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get in Touch
-          </motion.a>
+          <div className="home-buttons">
+            <motion.a
+              href={profileData.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-button"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaFileAlt /> View Resume
+            </motion.a>
+
+            <motion.a
+              href="#contact"
+              className="cta-button"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get in Touch
+            </motion.a>
+          </div>
         </motion.div>
 
         <motion.div
@@ -68,4 +95,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;
