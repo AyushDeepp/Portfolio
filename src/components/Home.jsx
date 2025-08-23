@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -10,6 +11,25 @@ import { profileData } from "../data/profile";
 import "../styles/Home.css";
 
 const Home = () => {
+  // Typewriter effect for name
+  const fullName = profileData.name;
+  const [typedName, setTypedName] = useState("");
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (index < fullName.length) {
+        setTypedName((prev) => prev + fullName[index]);
+        setIndex(index + 1);
+      } else {
+        setTimeout(() => {
+          setTypedName("");
+          setIndex(0);
+        }, 1200);
+      }
+    }, 120);
+    return () => clearTimeout(timeout);
+  }, [index, fullName]);
+
   const socialLinks = [
     { icon: <FaGithub />, url: profileData.social.github, label: "GitHub" },
     {
@@ -35,7 +55,7 @@ const Home = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="home-title">
-            Hi, I'm <span className="highlight">{profileData.name}</span>
+            Hi, I'm <span className="highlight typewriter">{typedName}</span>
           </h1>
           <h2 className="home-subtitle">{profileData.title}</h2>
           <p className="home-description">{profileData.about}</p>
@@ -79,17 +99,8 @@ const Home = () => {
             </motion.a>
           </div>
         </motion.div>
-
-        <motion.div
-          className="home-background"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
-        </motion.div>
+        {/* Remove the home-background shapes */}
+        <div className="home-background" />
       </div>
     </section>
   );

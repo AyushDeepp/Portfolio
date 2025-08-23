@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 110px;
 }
 
 .home-container {
@@ -194,52 +194,21 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+  background: var(--background);
 }
 
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  opacity: 0.1;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+/* Remove .shape and related keyframes */
+/* Add typewriter blinking cursor */
+.typewriter {
+  border-right: 2px solid var(--primary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-cursor 0.7s steps(1) infinite;
 }
 
-.shape:hover {
-  opacity: 0.2;
-  transform: scale(1.1);
-}
-
-.shape-1 {
-  width: 300px;
-  height: 300px;
-  top: -150px;
-  right: -150px;
-  animation: float 6s ease-in-out infinite;
-}
-
-.shape-2 {
-  width: 200px;
-  height: 200px;
-  bottom: -100px;
-  left: -100px;
-  animation: float 8s ease-in-out infinite;
-}
-
-.shape-3 {
-  width: 150px;
-  height: 150px;
-  top: 50%;
-  right: 10%;
-  animation: float 7s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(5deg);
-  }
+@keyframes blink-cursor {
+  0%, 100% { border-color: var(--primary-color); }
+  50% { border-color: transparent; }
 }
 
 /* Responsive design */

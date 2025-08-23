@@ -32,19 +32,19 @@ export const profileData = {
 
   skills: {
     technical: [
-      { name: "HTML5", level: 90 },
-      { name: "CSS3", level: 85 },
-      { name: "JavaScript", level: 80 },
-      { name: "React", level: 70 },
-      { name: "Node.js", level: 60 },
-      { name: "Python", level: 70 },
-      { name: "C", level: 70 },
-      { name: "Java", level: 60 },
-      { name: "SQL", level: 70 },
-      { name: "MongoDB", level: 60 },
-      { name: "Git", level: 40 },
-      { name: "Tailwind CSS", level: 60 },
-      { name: "Express", level: 50 },
+      { name: "HTML5", level: 90, icon: "SiHtml5", color: "#E34F26" },
+      { name: "CSS3", level: 85, icon: "SiCss3", color: "#1572B6" },
+      { name: "JavaScript", level: 80, icon: "SiJavascript", color: "#F7DF1E" },
+      { name: "React", level: 70, icon: "SiReact", color: "#61DAFB" },
+      { name: "Node.js", level: 60, icon: "SiNodedotjs", color: "#339933" },
+      { name: "Python", level: 70, icon: "SiPython", color: "#3776AB" },
+      { name: "C", level: 70, icon: "SiC", color: "#A8B9CC" },
+      { name: "Java", level: 60, icon: "SiOpenjdk", color: "#007396" },
+      { name: "SQL", level: 70, icon: "SiMysql", color: "#4479A1" },
+      { name: "MongoDB", level: 60, icon: "SiMongodb", color: "#47A248" },
+      { name: "Git", level: 40, icon: "SiGit", color: "#F05032" },
+      { name: "Tailwind CSS", level: 60, icon: "SiTailwindcss", color: "#06B6D4" },
+      { name: "Express", level: 50, icon: "SiExpress", color: "#000000" },
     ],
     other: [
       "Problem Solving",
@@ -116,7 +116,7 @@ export const profileData = {
   },
 
   resume:
-    "https://drive.google.com/file/d/1ZMo29_Zkgmm0Sxi7XxQHmC77nWF8XcNH/view?usp=sharing",
+    "https://drive.google.com/file/d/1kEmB5pL_u2PZB7rQ3D6z01M6xNa5RUq6/view?usp=sharing",
 
   achievements: [
     {
@@ -125,7 +125,7 @@ export const profileData = {
       date: "9th-10th June 2025",
       description:
         "Received recognition and participation certificate for developing an innovative AI-powered solution.",
-      image: "https://example.com/award1.jpg",
+      image: "https://drive.google.com/file/d/1k8jV91SUfFPfEtU5cIjNUx5tl_Z1ldnc/view?usp=drive_link",
     },
     {
       title: "Runner Up in Front-End Frenzy",

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaCode, FaTools, FaChevronRight } from 'react-icons/fa';
+import * as SiIcons from 'react-icons/si';
 import { profileData } from '../data/profile';
 import '../styles/Skills.css';
 
@@ -87,33 +88,46 @@ const Skills = () => {
               activeCategory === category.id && (
                 <motion.div
                   key={category.id}
-                  className="skills-grid"
+                  className="skills-grid innovative-skills-grid"
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"
                   exit="hidden"
                 >
-                  {category.skills.map((skill, index) => (
-                    <motion.div
-                      key={skill.name}
-                      className="skill-item"
-                      variants={skillVariants}
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      <div className="skill-header">
-                        <h3>{skill.name}</h3>
-                        <span className="skill-level">{skill.level}%</span>
-                      </div>
-                      <div className="skill-bar">
-                        <motion.div
-                          className="skill-progress"
-                          initial={{ width: 0 }}
-                          animate={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, ease: "easeOut" }}
-                        />
-                      </div>
-                    </motion.div>
-                  ))}
+                  {category.skills.map((skill, index) => {
+                    const IconComponent = skill.icon ? SiIcons[skill.icon] : null;
+                    return (
+                      <motion.div
+                        key={skill.name}
+                        className="skill-item innovative-skill-card"
+                        variants={skillVariants}
+                        whileHover={{ scale: 1.08, boxShadow: '0 8px 32px rgba(37,99,235,0.15)' }}
+                      >
+                        <div className="skill-header innovative-skill-header">
+                          {IconComponent && (
+                            <motion.span
+                              className="skill-icon innovative-skill-icon"
+                              whileHover={{ rotate: 12, scale: 1.2 }}
+                            >
+                              <IconComponent size={36} color={skill.color || undefined} />
+                            </motion.span>
+                          )}
+                          <h3>{skill.name}</h3>
+                          {skill.level && <span className="skill-level">{skill.level}%</span>}
+                        </div>
+                        {skill.level && (
+                          <div className="skill-bar">
+                            <motion.div
+                              className="skill-progress"
+                              initial={{ width: 0 }}
+                              animate={{ width: `${skill.level}%` }}
+                              transition={{ duration: 1, ease: "easeOut" }}
+                            />
+                          </div>
+                        )}
+                      </motion.div>
+                    );
+                  })}
                 </motion.div>
               )
             ))}

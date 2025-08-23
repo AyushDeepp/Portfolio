@@ -1,24 +1,13 @@
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  padding: 1rem 0;
 }
 
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.8rem 0;
+  /* No background or border here, handled by .nav-content */
 }
 
 .nav-content {
@@ -30,6 +19,13 @@
   align-items: center;
   position: relative;
   gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .logo a {
