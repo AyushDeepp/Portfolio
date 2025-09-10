@@ -68,15 +68,15 @@ export const profileData = {
       image:
         "/images/projects/Herb AI Authenticate Plant Identification Website.png",
     },
-    {
-      title: "Soulmegle",
-      description:
-        "Soulmegle is an AI powered Video Chatting platform where random users can connect to each other on the basis of similar interests.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "WebRTC"],
-      //github: "https://github.com/AyushDeepp/Herb-AI-Authenticate",
-      demo: "https://soulmegle.com/",
-      image: "/images/projects/Soulmegle.png",
-    },
+    // {
+    //   title: "Soulmegle",
+    //   description:
+    //     "Soulmegle is an AI powered Video Chatting platform where random users can connect to each other on the basis of similar interests.",
+    //   technologies: ["React", "Node.js", "MongoDB", "Express", "WebRTC"],
+    //   //github: "https://github.com/AyushDeepp/Herb-AI-Authenticate",
+    //   demo: "https://soulmegle.com/",
+    //   image: "/images/projects/Soulmegle.png",
+    // },
     {
       title: "Movie Recommendation System",
       description:

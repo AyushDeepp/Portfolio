@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -13,7 +13,7 @@
 .nav-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -271,11 +271,11 @@
 
 @media (max-width: 480px) {
   .navbar {
-    padding: 0.8rem 0;
+    padding: 0;
   }
 
   .navbar.scrolled {
-    padding: 0.6rem 0;
+    padding: 0;
   }
 
   .nav-content {
